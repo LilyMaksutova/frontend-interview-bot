@@ -648,5 +648,225 @@
         { "id": 4, "text": "Мемоизации функций", "isCorrect": true }
       ]
     }
+  ],
+  "typescript": [
+    {
+      "id": 1,
+      "text": "Чем отличается unknown от any в TypeScript?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "unknown и any идентичны",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "unknown более строгий и требует проверки типа перед использованием",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "any используется для типов функций, а unknown для объектов",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "unknown только для переменных в функциях, а any для глобальных переменных",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Как правильно объявить кортеж (tuple) в TypeScript?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "let tuple: [string, number] = ['hello', 10];",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "let tuple: [number, string] = ['hello', 10];",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "let tuple: Array<string, number> = ['hello', 10];",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "let tuple: Tuple = ['hello', 10];",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Что делает ключевое слово readonly в TypeScript?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Запрещает изменять объект",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Ограничивает доступ к переменной из других модулей",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "Запрещает изменять свойство объекта после его инициализации",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "Делает переменную доступной только для чтения в рантайме",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "redux": [
+    {
+      "id": 1,
+      "text": "Что такое action в Redux?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Функция, которая изменяет состояние приложения",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Метод для инициализации состояния",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "Механизм для обработки асинхронных запросов",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "Объект с описанием того, что должно произойти в приложении",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Какую роль выполняет reducer в Redux?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Изменяет состояние приложения напрямую",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Определяет, как состояние изменяется в ответ на action",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "Обрабатывает побочные эффекты",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "Отправляет действия в хранилище (store)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Какое свойство store используется для отправки action в Redux?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "getState()",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "subscribe()",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "dispatch()",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "createAction()",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Какой из следующих методов используется для подписки на изменения состояния в Redux?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "subscribe()",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "dispatch()",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "connect()",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "getState()",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Какое ключевое правило относится к состоянию в Redux?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Состояние может быть изменено только с помощью прямого присвоения",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Состояние может быть изменено в любом компоненте",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "Состояние изменяется только через actions, которые обрабатываются reducers",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "Состояние может изменяться асинхронно",
+          "isCorrect": false
+        }
+      ]
+    }
   ]
 }
