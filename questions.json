@@ -652,27 +652,27 @@
   "typescript": [
     {
       "id": 1,
-      "text": "Чем отличается unknown от any в TypeScript?",
+      "text": "Какой тип используется в TypeScript для указания, что переменная может принимать значение любого типа?",
       "hasOptions": true,
       "options": [
         {
           "id": 1,
-          "text": "unknown и any идентичны",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "text": "unknown более строгий и требует проверки типа перед использованием",
+          "text": "any",
           "isCorrect": true
         },
         {
+          "id": 2,
+          "text": "unknown",
+          "isCorrect": false
+        },
+        {
           "id": 3,
-          "text": "any используется для типов функций, а unknown для объектов",
+          "text": "mixed",
           "isCorrect": false
         },
         {
           "id": 4,
-          "text": "unknown только для переменных в функциях, а any для глобальных переменных",
+          "text": "var",
           "isCorrect": false
         }
       ]
@@ -706,27 +706,216 @@
     },
     {
       "id": 3,
-      "text": "Что делает ключевое слово readonly в TypeScript?",
+      "text": "Какой оператор используется для утверждения типа (type assertion) в TypeScript?",
       "hasOptions": true,
       "options": [
         {
           "id": 1,
-          "text": "Запрещает изменять объект",
+          "text": "!",
           "isCorrect": false
         },
         {
           "id": 2,
-          "text": "Ограничивает доступ к переменной из других модулей",
+          "text": "as",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "assert",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "is",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Какой файл содержит конфигурацию компилятора TypeScript?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "tsconfig.js",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "typescript.json",
           "isCorrect": false
         },
         {
           "id": 3,
-          "text": "Запрещает изменять свойство объекта после его инициализации",
+          "text": "config.ts",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "tsconfig.json",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Что произойдет, если попытаться присвоить строковое значение переменной, тип которой был объявлен как number?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Программа выполнится без ошибок",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Будет выдано предупреждение",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "Ошибка на этапе компиляции",
           "isCorrect": true
         },
         {
           "id": 4,
-          "text": "Делает переменную доступной только для чтения в рантайме",
+          "text": "Ошибка на этапе выполнения",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Какой из следующих типов корректно описывает переменную, которая может быть либо строкой, либо числом?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "string | number",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "string || number",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "string & number",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "string or number",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Что определяет интерфейс в TypeScript?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Класс с фиксированными методами",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Множество конкретных значений переменной",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "Структуру объекта со свойствами и типами",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "Ограничение количества свойств в объекте",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Как правильно создать функцию identity, которая принимает аргумент любого типа и возвращает его?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "function identity<T>(arg:any):any{return arg}",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "function identity(arg:T):T{return arg}",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "function identity<T>(arg:T):T{return arg}",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "function identity(arg:T):any{return arg}",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Какой поведенческий паттерн позволяет одному объекту уведомлять другие объекты о произошедших изменениях?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "Команда (Command)",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "Наблюдатель (Observer)",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "Стратегия (Strategy)",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "Состояние (State)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Как импортировать весь модуль и присвоить его содержимое переменной math?",
+      "hasOptions": true,
+      "options": [
+        {
+          "id": 1,
+          "text": "import * from './math' as math;",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "import math from './math';",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "import * as math from './math';",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "import all from './math' as math;",
           "isCorrect": false
         }
       ]
