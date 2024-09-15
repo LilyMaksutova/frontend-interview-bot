@@ -30,6 +30,15 @@ bot.command('start', async (ctx) => {
   });
 });
 
+const sanitizeHTML = (text) => {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+};
+
 bot.hears(
   [
     'CSS',
@@ -42,7 +51,14 @@ bot.hears(
   ],
   async (ctx) => {
     const topic = ctx.message.text.toLowerCase();
-    const { question, questionTopic } = getRandomQuestion(topic);
+    const result = getRandomQuestion(topic);
+    if (!result || !result.question) {
+      await ctx.reply(
+        `Не удалось получить вопрос по теме "${topic}". Возможно, вопросы закончились. Попробуйте другую тему.`
+      );
+      return;
+    }
+    const { question, questionTopic } = result;
     let inlineKeyboard;
 
     if (question.hasOptions) {
@@ -66,7 +82,9 @@ bot.hears(
         })
       );
     }
-    await ctx.reply(`<b>${question.text}</b>`, {
+    const sanitizedQuestionText = sanitizeHTML(question.text);
+
+    await ctx.reply(`<b>${sanitizedQuestionText}</b>`, {
       parse_mode: 'HTML',
       reply_markup: inlineKeyboard,
     });

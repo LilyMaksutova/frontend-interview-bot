@@ -23,12 +23,10 @@ const getRandomQuestion = (topic) => {
   );
 
   if (availableQuestions.length === 0) {
-    usedQuestions[questionTopic] = [];
-    return getRandomQuestion(topic);
+    return { question: null, questionTopic };
   }
 
   const randomQuestionIndex = random.integer(0, availableQuestions.length - 1);
-
   const selectedQuestion = availableQuestions[randomQuestionIndex];
 
   usedQuestions[questionTopic].push(selectedQuestion.id);
