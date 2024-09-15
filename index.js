@@ -66,8 +66,8 @@ bot.hears(
         })
       );
     }
-
-    await ctx.reply(question.text, {
+    await ctx.reply(`<b>${question.text}</b>`, {
+      parse_mode: 'HTML',
       reply_markup: inlineKeyboard,
     });
   }
